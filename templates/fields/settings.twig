@@ -1,0 +1,13 @@
+{% import '_includes/forms' as forms %}
+
+{{ forms.textField(
+	{
+		label: 'Default Color',
+		name: 'defaultColor',
+		class: 'color-input',
+		value: settings.defaultColor,
+		placeholder : '#',
+		unit : '',
+		title: ""
+	}
+) }}
