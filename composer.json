@@ -1,0 +1,14 @@
+{
+	"name": "/huebee",
+	"description": "Huebee colour picker integration",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "@cole007",
+			"homepage": "http://ournameismud.co.uk/"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
