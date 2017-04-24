@@ -2,7 +2,7 @@
 
 [Huebee colour picker](http://huebee.buzz/) for Craft CMS
 
-+![Screenshot](resources/huebee.svg)
++![Screenshot](resources/screenshots/plugin_logo.png)
 
 
 ## Installation
