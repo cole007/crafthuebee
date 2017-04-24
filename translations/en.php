@@ -1,13 +1,13 @@
 <?php
 /**
- * Huebee plugin for Craft CMS
+ * Craft Huebee plugin for Craft CMS
  *
- * Huebee Translation
+ * Craft Huebee Translation
  *
  * @author    @cole007
  * @copyright Copyright (c) 2017 @cole007
  * @link      http://ournameismud.co.uk/
- * @package   Huebee
+ * @package   CraftHuebee
  * @since     1.0.0
  */
 

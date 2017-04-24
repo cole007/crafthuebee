@@ -1,18 +1,18 @@
 /**
- * Huebee plugin for Craft CMS
+ * Craft Huebee plugin for Craft CMS
  *
- * HuebeeFieldType JS
+ * CraftHuebeeFieldType JS
  *
  * @author    @cole007
  * @copyright Copyright (c) 2017 @cole007
  * @link      http://ournameismud.co.uk/
- * @package   Huebee
+ * @package   CraftHuebee
  * @since     1.0.0
  */
 
  ;(function ( $, window, document, undefined ) {
 
-    var pluginName = "HuebeeFieldType",
+    var pluginName = "CraftHuebeeFieldType",
         defaults = {
         };
 

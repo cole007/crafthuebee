@@ -1,6 +1,6 @@
 {
-	"name": "/huebee",
-	"description": "Huebee colour picker integration",
+	"name": "crafthuebee/crafthuebee",
+	"description": "Huebee colour picker fieldtype for Craft",
 	"type": "craft-plugin",
 	"authors": [
 		{

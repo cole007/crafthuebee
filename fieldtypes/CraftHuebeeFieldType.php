@@ -1,23 +1,23 @@
 <?php
 /**
- * Huebee plugin for Craft CMS
+ * Craft Huebee plugin for Craft CMS
  *
- * Huebee FieldType
+ * CraftHuebee FieldType
  *
  * @author    @cole007
  * @copyright Copyright (c) 2017 @cole007
  * @link      http://ournameismud.co.uk/
- * @package   Huebee
+ * @package   CraftHuebee
  * @since     1.0.0
  */
 
 namespace Craft;
 
-class HuebeeFieldType extends BaseFieldType
+class CraftHuebeeFieldType extends BaseFieldType
 {
     public function getName()
     {
-        return Craft::t('Huebee');
+        return Craft::t('Craft Huebee');
     }
 
     public function defineContentAttribute()
@@ -37,11 +37,11 @@ class HuebeeFieldType extends BaseFieldType
 		
 		/* -- Include our Javascript & CSS */
 
-        craft()->templates->includeCssResource('huebee/css/fields/huebee.min.css');
+        craft()->templates->includeCssResource('crafthuebee/css/fields/huebee.min.css');
         craft()->templates->includeCss('.huebee { z-index: 100; } #container { overflow-y: visible; }');
-        craft()->templates->includeJsResource('huebee/js/fields/huebee.pkgd.min.js');
+        craft()->templates->includeJsResource('crafthuebee/js/fields/huebee.pkgd.min.js');
         craft()->templates->includeJs("$('.color-input').each( function( i, elem ) { var hueb = new Huebee( elem ); })");
-		
+
 		/* -- Variables to pass down to our rendered template */
 
         $variables = array(
@@ -52,9 +52,9 @@ class HuebeeFieldType extends BaseFieldType
             'default' => $this->getSettings()->defaultColor,
             );
 
-        return craft()->templates->render('huebee/fields/HuebeeFieldType', $variables);
-    }
+        return craft()->templates->render('crafthuebee/fields/index', $variables);
 
+    }
 
 
     protected function defineSettings()
@@ -66,15 +66,14 @@ class HuebeeFieldType extends BaseFieldType
     
     public function getSettingsHtml()
     {
-        craft()->templates->includeCssResource('huebee/css/fields/huebee.min.css');
+        craft()->templates->includeCssResource('crafthuebee/css/fields/huebee.min.css');
         craft()->templates->includeCss('.huebee { z-index: 100; } #container { overflow-y: visible; }');
-        craft()->templates->includeJsResource('huebee/js/fields/huebee.pkgd.min.js');
+        craft()->templates->includeJsResource('crafthuebee/js/fields/huebee.pkgd.min.js');
         craft()->templates->includeJs("$('.color-input').each( function( i, elem ) { var hueb = new Huebee( elem ); })");
-        return craft()->templates->render('huebee/fields/settings', array(
+        return craft()->templates->render('crafthuebee/fields/settings', array(
             'settings' => $this->getSettings()
         ));
     }
-
 
     public function prepValueFromPost($value)
     {
