@@ -32,6 +32,5 @@ Some things to do, and ideas for potential features:
 * Fix issue with overlap from #container when picker is activated (CSS)
 * Custom settings to specify which format (eg hrex, shorthex, hsl)
 * Custom settings to specify custom colours as a predefined palette
-* Release it
 
 Brought to you by [@cole007](http://ournameismud.co.uk/)
