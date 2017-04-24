@@ -1,6 +1,9 @@
 # Huebee plugin for Craft CMS
 
-Huebee colour picker
+[Huebee colour picker](http://huebee.buzz/) for Craft CMS
+
++![Screenshot](resources/huebee.svg)
+
 
 ## Installation
 
