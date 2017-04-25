@@ -1,0 +1,63 @@
+{% import '_includes/forms' as forms %}
+
+	{% set i = 0 %}
+	<table id="skills" class="data collapsible">
+
+	<thead>
+		<tr>
+			<th scope="col">{{ 'Colors'|t }}</th>
+			<th colspan="2"></th>
+		</tr>
+	</thead>
+
+	<tbody>
+	{% set colours = settings['palette'] %}
+	{% if colours is defined and colours|length > 0 %}
+	{% for colour in colours %}
+		<tr><td>
+		{{ forms.textField({
+		    class: 'color-input',
+		    size: 20,
+		    name: 'palette[]',
+		    value: colour,
+		    placeholder: '#' })
+		}}
+		</td>
+		<td class="thin"><a class="move icon" title="{{ 'Reorder'|t }}" role="button"></a></td>
+		<td class="thin"><a class="delete icon" title="{{ 'Delete'|t }}"></a></td>
+		</tr>
+		{% set i = i+1 %}
+	{% endfor %}
+	{% else %}
+	<tr><td>
+		{{ forms.textField({
+		    class: 'color-input',
+		    size: 20,
+		    name: 'palette[]',
+		    placeholder: '#' })
+		}}
+		</td>
+		<td class="thin"><a class="move icon" title="{{ 'Reorder'|t }}" role="button"></a></td>
+		<td class="thin"><a class="delete icon" title="{{ 'Delete'|t }}"></a></td>
+	</tr>
+	{% endif %}
+
+
+	</tbody>
+	<tfoot style="display:none">
+		<tr><td>
+			{{ forms.textField({
+			    class: 'color-input',
+			    id: 'skills_'~i,
+			    size: 20,
+			    name: 'palette[]',
+		    	placeholder: '#' })
+			}}
+			</td>
+			<td class="thin"><a class="move icon" title="{{ 'Reorder'|t }}" role="button"></a></td>
+			<td class="thin"><a class="delete icon" title="{{ 'Delete'|t }}"></a></td>
+		</tr>
+
+	</tfoot>
+	</table>
+	<div class="btn add icon">{{ addRowLabel is defined ? addRowLabel : "New Color"|t }}</div>

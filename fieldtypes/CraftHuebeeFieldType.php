@@ -40,7 +40,11 @@ class CraftHuebeeFieldType extends BaseFieldType
         craft()->templates->includeCssResource('crafthuebee/css/fields/huebee.min.css');
         craft()->templates->includeCss('.huebee { z-index: 100; } #container { overflow-y: visible; }');
         craft()->templates->includeJsResource('crafthuebee/js/fields/huebee.pkgd.min.js');
-        craft()->templates->includeJs("$('.color-input').each( function( i, elem ) { var hueb = new Huebee( elem ); })");
+
+        $plugin = craft()->plugins->getPlugin('crafthuebee');
+        $settings = $plugin->getSettings();
+        $palette = '\'' . implode('\',\'',$settings['palette']) . '\'';
+        craft()->templates->includeJs("$('.color-input').each( function( i, elem ) { var hueb = new Huebee( elem, { customColors: [".$palette."]} ); })");
 
 		/* -- Variables to pass down to our rendered template */
 

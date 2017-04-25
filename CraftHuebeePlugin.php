@@ -50,6 +50,37 @@ class CraftHuebeePlugin extends BasePlugin
             return '1.0.0';
         }
 
+
+        protected function defineSettings()
+        {
+            return array(
+                'palette' => array(AttributeType::Mixed, 'default' => array([])),
+            );
+        }
+
+        public function getSettingsHtml()
+        {
+           craft()->templates->includeCssResource('crafthuebee/css/fields/huebee.min.css');
+           craft()->templates->includeCss('.huebee { z-index: 100; } #container { overflow-y: visible; }');
+           craft()->templates->includeJsResource('crafthuebee/js/fields/huebee.pkgd.min.js');
+           craft()->templates->includeJsResource('crafthuebee/js/fields/script.js');
+
+           $plugin = craft()->plugins->getPlugin('crafthuebee');
+           $settings = $plugin->getSettings();
+
+           craft()->templates->includeJs("$('.color-input').each( function( i, elem ) { var hueb = new Huebee( elem ); })");
+
+           return craft()->templates->render('craftHuebee/settings', array(
+               'settings' => $settings
+           ));
+       }
+       	
+
+       public function prepSettings($settings)
+       {
+           $settings['palette'] = array_filter($settings['palette']);
+           return $settings;
+       }
         public function getDeveloper()
         {
             return '@cole007';
