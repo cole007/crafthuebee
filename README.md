@@ -31,6 +31,11 @@ Some things to do, and ideas for potential features:
 
 * Fix issue with overlap from #container when picker is activated (CSS)
 * Custom settings to specify which format (eg hrex, shorthex, hsl)
-* Custom settings to specify custom colours as a predefined palette
 
-Brought to you by [@cole007](http://ournameismud.co.uk/)
+## Releases
+
+* 1.0.1 Custom settings to specify custom colours as a predefined palette
+* 1.0.0 Initial release
+
+Brought to you by [@cole007](https://twitter.com/cole007) and [Our Name is Mud](http://ournameismud.co.uk/).  
+This code is released under the [GNU GPL license v3](https://www.gnu.org/licenses/gpl-3.0.html) and extends the [license of Huebee](http://huebee.buzz/license.html) for open-source or personal use.
