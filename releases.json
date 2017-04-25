@@ -1,18 +1,18 @@
 [
     {
-        "version": "1.0.0",
-        "downloadUrl": "https://github.com/cole007/crafthuebee/archive/master.zip",
-        "date": "2017-04-24T13:23:27.633Z",
-        "notes": [
-            "[Added] Initial release"
-        ]
-    },
-    {
         "version": "1.0.1",
         "downloadUrl": "https://github.com/cole007/crafthuebee/archive/master.zip",
         "date": "2017-04-25T09:15:00.000Z",
         "notes": [
             "[Added] Custom settings to specify custom colours as a predefined palette"
         ]
-    }
+    },
+    {
+        "version": "1.0.0",
+        "downloadUrl": "https://github.com/cole007/crafthuebee/archive/master.zip",
+        "date": "2017-04-24T13:23:27.633Z",
+        "notes": [
+            "[Added] Initial release"
+        ]
+    }    
 ]
