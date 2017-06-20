@@ -34,6 +34,7 @@ Some things to do, and ideas for potential features:
 
 ## Releases
 
+* 1.0.2 Resolve issue/bug with array being provided as default settings value
 * 1.0.1 Custom settings to specify custom colours as a predefined palette
 * 1.0.0 Initial release
 
